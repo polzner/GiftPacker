@@ -18,6 +18,7 @@ public class BoxStateBehaviour : MonoBehaviour, IStateSwitcher
     [SerializeField] private Toy _toy;
     [SerializeField] private RigRecoverer _handRigRecoverer;
     [SerializeField] private PackingReseter _packingReseter;
+    [SerializeField] private BowPlacer _bowPlacer;
     [SerializeField] private float _switchDelay = 2;
 
 
@@ -30,10 +31,11 @@ public class BoxStateBehaviour : MonoBehaviour, IStateSwitcher
         {
             new StartState(_boxAnimator, this, _packingReseter, _startMover),
             new StartPackingBoxState(_boxAnimator, this, _boxRandomizer, _boxSideAnimationPlayer,
-            _characterMovingAnimator, _handRigRecoverer, _starsEffect),
+            _characterMovingAnimator, _handRigRecoverer),
             new EndPackingBoxState(_boxAnimator, this, _boxRandomizer, _boxSideAnimationPlayer),
             new FillerPlaceState(_boxAnimator, this, _boxRandomizer, _toy, _switchDelay, _boxFillerPlacer),
-            new PackedBoxState(_boxAnimator, this, _handRigRecoverer, _boxRandomizer, _congragulationAnimation, _starsEffect),
+            new BowPlaceState(_boxAnimator, this, _starsEffect, _bowPlacer, _boxRandomizer, _congragulationAnimation),
+            new PackedBoxState(_boxAnimator, this, _handRigRecoverer, _boxRandomizer),
             new EndState(_boxAnimator, this, _characterMovingAnimator, _endMover)
         };
 
