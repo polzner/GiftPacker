@@ -37,7 +37,7 @@ public class BowPlaceState : BaseState, IAvailability
     private void OnBowPlaced()
     {
         _starEffect.Play();
-        BoxTransformationAnimator.SetTrigger(BoxTransformationAnimatorParameters.Triggers.EndPacking);
+        BoxTransformationAnimator.SetTrigger(BoxTransformationAnimatorParameters.Triggers.PlaceOnHands);
         _congragulationsAnimation.Play();
         StateSwitcher.Switch<EndState>(2f);
     }

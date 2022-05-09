@@ -10,6 +10,7 @@ public static class BoxTransformationAnimatorParameters
         public const string Rotate = nameof(Rotate);
         public const string Flip = nameof(Flip);
         public const string WithoutFlip = nameof(WithoutFlip);
+        public const string PlaceOnHands = nameof(PlaceOnHands);
         public const string EndPacking = nameof(EndPacking);
         public const string PlaceFiller = nameof(PlaceFiller);
     }
