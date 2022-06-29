@@ -3,10 +3,10 @@ using UnityEngine;
 public class PackedBoxState : BaseState
 {
     private RigRecoverer _handRigRecoverer;
-    private BoxRandomizer _randomizer;
+    private BoxModelChanger _randomizer;
 
     public PackedBoxState(Animator boxAnimator,
-        IStateSwitcher stateSwitcher, RigRecoverer handRigRecoverer, BoxRandomizer randomizer)
+        IStateSwitcher stateSwitcher, RigRecoverer handRigRecoverer, BoxModelChanger randomizer)
         : base(boxAnimator, stateSwitcher)
     {
         _handRigRecoverer = handRigRecoverer;

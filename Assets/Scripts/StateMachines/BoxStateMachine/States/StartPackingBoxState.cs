@@ -6,7 +6,7 @@ public class StartPackingBoxState : PackingBoxState
     private RigRecoverer _handRigRecoverer;
 
     public StartPackingBoxState(Animator boxAnimator, IStateSwitcher stateSwitcher,
-        BoxRandomizer boxRandomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer,
+        BoxModelChanger boxRandomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer,
         Animator characterMotionAnimator, RigRecoverer handRigRecoverer) : base(boxAnimator, stateSwitcher, boxRandomizer, boxTriggerSideAnimationPlayer)
     {
         _characterMotionAnimator = characterMotionAnimator;

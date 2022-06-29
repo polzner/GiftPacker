@@ -1,39 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
 
-[RequireComponent(typeof(MultiRotationConstraint))]
-public class ConstraintRecoverer : MonoBehaviour
+[System.Serializable]
+public class ConstraintRecoverer
 {
-    [SerializeField] private float _time;
-    private MultiRotationConstraint _constraint;
+    [SerializeField] private Constraint _constraint;
+    [Range(0, 1)][SerializeField] private float _weight;
 
-    private void Awake()
+    public void Recover()
     {
-        _constraint = GetComponent<MultiRotationConstraint>();    
+        _constraint.Recover(_weight);
     }
 
     public void ResetWeight()
     {
-        _constraint.weight = 0;
-    }
-
-    public void Recover(float targetWeight)
-    {
-        StartCoroutine(RecoverRoutine(_constraint, targetWeight, _time));
-    }
-
-    private IEnumerator RecoverRoutine(MultiRotationConstraint constraint, float targetWeight, float time)
-    {
-        float currentTime = 0;
-        float startWeight = constraint.weight;
-
-        while (constraint.weight != targetWeight)
-        {
-            constraint.weight = Mathf.Lerp(startWeight, targetWeight, currentTime / time);
-            currentTime += Time.deltaTime;
-            yield return null;
-        }
+        _constraint.ResetWeight();
     }
 }

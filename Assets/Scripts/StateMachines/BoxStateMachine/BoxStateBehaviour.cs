@@ -13,14 +13,13 @@ public class BoxStateBehaviour : MonoBehaviour, IStateSwitcher
     [SerializeField] private Animation _congragulationAnimation;
     [SerializeField] private ParticleSystem _starsEffect;
     [SerializeField] private BoxTriggerSideAnimationPlayer _boxSideAnimationPlayer;
-    [SerializeField] private BoxRandomizer _boxRandomizer;
+    [SerializeField] private BoxModelChanger _boxRandomizer;
     [SerializeField] private BoxFillerPlacer _boxFillerPlacer;
     [SerializeField] private Toy _toy;
     [SerializeField] private RigRecoverer _handRigRecoverer;
     [SerializeField] private PackingReseter _packingReseter;
     [SerializeField] private BowPlacer _bowPlacer;
     [SerializeField] private float _switchDelay = 2;
-
 
     private List<BaseState> _allStates;
     private BaseState _currentState;

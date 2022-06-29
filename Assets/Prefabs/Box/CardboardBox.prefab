@@ -113,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08284855, y: 0.79999995, z: 1}
-  m_Center: {x: -0.5095897, y: 0.5, z: -1.2325952e-32}
+  m_Size: {x: 0.10747719, y: 2.2378368, z: 1}
+  m_Center: {x: -0.43593216, y: 1.1461883, z: -2.465853e-24}
 --- !u!65 &5343885044066835377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126,8 +126,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08, y: 0.8, z: 1}
-  m_Center: {x: 0.5, y: 0.5, z: 0}
+  m_Size: {x: 0.106720924, y: 1.0160692, z: 1}
+  m_Center: {x: 0.5201793, y: 0.608039, z: -8.93366e-25}
 --- !u!65 &3277849987636291344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.88695115, y: 1, z: 0.07999998}
-  m_Center: {x: -6.617445e-24, y: 0.5, z: 0.43}
+  m_Size: {x: 0.88695115, y: 2.2297604, z: 0.07999998}
+  m_Center: {x: -0.0000021980768, y: 1.1148815, z: 0.43}
 --- !u!65 &2917552738076841133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,8 +152,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9134313, y: 1, z: 0.07999998}
-  m_Center: {x: -1.323489e-23, y: 0.5, z: -0.43}
+  m_Size: {x: 0.9134313, y: 2.2382293, z: 0.07999998}
+  m_Center: {x: -0.0000028017496, y: 1.119117, z: -0.43}
 --- !u!65 &8219250951412490432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,8 +165,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.61390305, y: 0.79999995, z: 0.48210078}
-  m_Center: {x: -0.03379917, y: 0.5, z: 0}
+  m_Size: {x: 0.5607215, y: 0.90390456, z: 0.52720845}
+  m_Center: {x: 0.08526856, y: 0.55195254, z: 0.012453496}
 --- !u!114 &6701696418322989240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,9 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ballPrefab: {fileID: 6828294791234009365, guid: 4167e28cb07d760419fcde5a9997b1d7, type: 3}
-  _count: 40
+  _count: 50
   _colorRandomizer: {fileID: 4102659564308297376}
   _colliderForBallRandomPosition: {fileID: 8219250951412490432}
+  _gravityScale: 10
 --- !u!114 &4102659564308297376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67611f6824ceaf44abdca6f97b2e11dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
+  _baseColor: {r: 0.6039216, g: 0.5294118, b: 0.6117647, a: 1}
   _gradient:
     serializedVersion: 2
     key0: {r: 0.754717, g: 0.26699895, b: 0.30813172, a: 1}

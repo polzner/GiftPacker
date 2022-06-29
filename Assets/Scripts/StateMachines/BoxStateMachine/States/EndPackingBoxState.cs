@@ -3,7 +3,7 @@ using UnityEngine;
 public class EndPackingBoxState : PackingBoxState
 {
     public EndPackingBoxState(Animator boxAnimator, 
-        IStateSwitcher stateSwitcher, BoxRandomizer boxRandomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer)
+        IStateSwitcher stateSwitcher, BoxModelChanger boxRandomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer)
         : base(boxAnimator, stateSwitcher, boxRandomizer, boxTriggerSideAnimationPlayer)
     {
     }

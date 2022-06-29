@@ -3,11 +3,11 @@ using UnityEngine;
 public abstract class PackingBoxState : BaseState, IClickable
 {
     protected Side Side;
-    protected BoxRandomizer Randomizer;
+    protected BoxModelChanger Randomizer;
     protected BoxTriggerSideAnimationPlayer SideAnimationPlayer;
 
     protected PackingBoxState(Animator boxAnimator,
-        IStateSwitcher stateSwitcher, BoxRandomizer randomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer)
+        IStateSwitcher stateSwitcher, BoxModelChanger randomizer, BoxTriggerSideAnimationPlayer boxTriggerSideAnimationPlayer)
         : base(boxAnimator, stateSwitcher)
     {
         Randomizer = randomizer;

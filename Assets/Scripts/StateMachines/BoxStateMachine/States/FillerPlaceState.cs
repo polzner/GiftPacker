@@ -4,11 +4,13 @@ public class FillerPlaceState : BaseState, IAvailability
 {
     private BoxFillerPlacer _boxFillerPlacer;
     private Toy _toy;
-    private BoxRandomizer _boxRandomizer;
+    private BoxModelChanger _boxRandomizer;
     private float _delay;
 
+    private int _count = 0;
+
     public FillerPlaceState(Animator boxAnimator,
-        IStateSwitcher stateSwitcher, BoxRandomizer boxRandomizer, Toy toy
+        IStateSwitcher stateSwitcher, BoxModelChanger boxRandomizer, Toy toy
         , float delay, BoxFillerPlacer boxFillerPlacer) : base(boxAnimator, stateSwitcher)
     {
         _toy = toy;
@@ -17,7 +19,17 @@ public class FillerPlaceState : BaseState, IAvailability
         _boxFillerPlacer = boxFillerPlacer;
     }
 
-    private BoxFillerPlacer.ColorMode GetRandomColorMode => (BoxFillerPlacer.ColorMode)Random.Range(0, 2);
+    private BoxFillerPlacer.ColorMode GetRandomColorMode()
+    {
+        if (_count == 1)
+        {
+            _count++;
+            return BoxFillerPlacer.ColorMode.Random;
+        }
+
+        _count++;
+        return BoxFillerPlacer.ColorMode.Standart;
+    }
 
     public void OnEnable()
     {
@@ -31,14 +43,14 @@ public class FillerPlaceState : BaseState, IAvailability
 
     public override void Start()
     {
-        _boxFillerPlacer.EnableFiller(GetRandomColorMode);
+        _boxFillerPlacer.EnableFiller(GetRandomColorMode());
         BoxTransformationAnimator.SetTrigger(BoxTransformationAnimatorParameters.Triggers.PlaceFiller);
     }
 
     public override void Stop()
     {
         _boxFillerPlacer.ResetFiller();
-        _toy.CurrentMesh.enabled = false;
+        _toy.MeshChanger.DisableMesh();
     }
 
     private void OnToyPlaced()

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Boxes
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
-  m_ShaderKeywords: _CELPRIMARYMODE_NONE _TEXTUREBLENDINGMODE_MULTIPLY _UNITYSHADOWMODE_NONE
+  m_ShaderKeywords: _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -69,7 +69,7 @@ Material:
     - _BumpScale: 1
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 0
+    - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -90,8 +90,8 @@ Material:
     - _GradientEnabled: 0
     - _GradientSize: 10
     - _LightContribution: 0
-    - _LightmapDirectionPitch: 174
-    - _LightmapDirectionYaw: 182
+    - _LightmapDirectionPitch: 360
+    - _LightmapDirectionYaw: 180
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -99,9 +99,9 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.217
+    - _SelfShadingSize: 0.555
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.132
+    - _ShadowEdgeSize: 0.5
     - _ShadowEdgeSizeExtra: 0.05
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
@@ -113,12 +113,12 @@ Material:
     - _UVSec: 0
     - _UnityShadowMode: 0
     - _UnityShadowPower: 0.2
-    - _UnityShadowSharpness: 1.08
+    - _UnityShadowSharpness: 1
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5660378, g: 0.5633678, b: 0.5633678, a: 1}
-    - _ColorDim: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.83137256, g: 0.6901961, b: 0.77254903, a: 0.98039216}
+    - _ColorDim: {r: 0.44313726, g: 0.37254903, b: 0.37254903, a: 1}
     - _ColorDimCurve: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
     - _ColorDimExtra: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
     - _ColorDimSteps: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
@@ -126,6 +126,6 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _LightmapDirection: {r: -0.0036479805, g: -0.9945219, b: -0.10446482, a: 0}
-    - _UnityShadowColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    - _LightmapDirection: {r: -1.5285484e-14, g: 1, b: -0.00000017484555, a: 0}
+    - _UnityShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

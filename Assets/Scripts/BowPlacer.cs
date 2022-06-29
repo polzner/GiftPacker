@@ -30,7 +30,7 @@ public class BowPlacer : MonoBehaviour
         Quaternion startRotation = defaultTransform.rotation;
         float currentTime = 0;
 
-        while (currentTime <= time)
+        while (targetTransform.position != bow.position)
         {
             bow.position = Vector3.Lerp(startPosition, targetTransform.position, currentTime/time);
             bow.rotation = Quaternion.Lerp(startRotation, targetTransform.rotation, currentTime/time);

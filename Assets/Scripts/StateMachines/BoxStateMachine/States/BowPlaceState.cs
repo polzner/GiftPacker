@@ -4,10 +4,10 @@ public class BowPlaceState : BaseState, IAvailability
 {
     private ParticleSystem _starEffect;
     private BowPlacer _bowPlacer;
-    private BoxRandomizer _boxRandomizer;
+    private BoxModelChanger _boxRandomizer;
     private Animation _congragulationsAnimation;
 
-    public BowPlaceState(Animator boxAnimator, IStateSwitcher stateSwitcher, ParticleSystem starEffect, BowPlacer bowPlacer, BoxRandomizer boxRandomizer, Animation congragulationsAnimation) : base(boxAnimator, stateSwitcher)
+    public BowPlaceState(Animator boxAnimator, IStateSwitcher stateSwitcher, ParticleSystem starEffect, BowPlacer bowPlacer, BoxModelChanger boxRandomizer, Animation congragulationsAnimation) : base(boxAnimator, stateSwitcher)
     {
         _starEffect = starEffect;
         _bowPlacer = bowPlacer;
