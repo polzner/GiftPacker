@@ -84,7 +84,7 @@ Material:
     - _FlatnessExtra: 1
     - _Gloss: 29
     - _GlossMapScale: 1
-    - _Glossiness: 0.393
+    - _Glossiness: 0
     - _GlossyReflections: 0
     - _GradientAngle: 0
     - _GradientCenterX: 0
@@ -94,7 +94,7 @@ Material:
     - _LightContribution: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
-    - _Metallic: 0.072
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OverrideLightmapDir: 0
@@ -120,7 +120,7 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.7075472, g: 0.5039605, b: 0.6532574, a: 1}
+    - _Color: {r: 0.45136172, g: 0.49412915, b: 0.6509434, a: 1}
     - _ColorDim: {r: 0.9333334, g: 0.4666667, b: 0.37647063, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
